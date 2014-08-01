@@ -7,16 +7,15 @@ except NameError: pass
 n = int(input("Enter a number to be square rooted: "))
 
 #def sqrt(n):
-guess = n
+root_value = n
 
-while abs(guess*guess - n) > 0:
-    guess_old = guess
-    guess = (guess +n/guess)/2.0
-    if guess_old == guess:
+while abs( root_value * root_value - n) > 0:
+    root_value_old = root_value
+    root_value = (root_value + n / root_value) / 2.0
+    if root_value_old == root_value:
        print ("There is no square root!")
        exit()
-    print (guess)
 
-print (guess)
+print ("The sqare root of %d is %d!" % (n, root_value))
 
 
