@@ -10,7 +10,13 @@ n = int(input("Enter a number to be square rooted: "))
 guess = n
 
 while abs(guess*guess - n) > 0:
+    guess_old = guess
     guess = (guess +n/guess)/2.0
+    if guess_old == guess:
+       print ("There is no square root!")
+       exit()
+    print (guess)
+
 print (guess)
 
 
