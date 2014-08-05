@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 
+#int quotient
+#int remainder
+#Python 2.x fix
+try: input = raw_input
+except NameError: pass
+
+dividend = int(input("What is the dividend? "))
+divisor = int(input("What is the dvisor? "))
+
 #32 bit division
 def divide(dividend, divisor):
     quotient = 0
@@ -18,7 +27,8 @@ def divide(dividend, divisor):
             #shift left, no need to or in a 0
             quotient = quotient << 1
         divisor = divisor >> 1
+#    print (quotient, remainder)
     return (quotient, remainder)
     
 #main program
-print (divide(125,7))
+print (divide(dividend,divisor))
