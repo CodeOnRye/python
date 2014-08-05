@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-#int quotient
-#int remainder
 #Python 2.x fix
 try: input = raw_input
 except NameError: pass
@@ -33,9 +31,6 @@ def divide(dividend, divisor):
         quotient = quotient + 1
         remainder = 0
 
-
-#    print (quotient, remainder)
     return (quotient, remainder)
     
-#main program
 print (divide(dividend,divisor))
