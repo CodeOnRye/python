@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+
+#Python 2.x compatibility 
+try: input = raw_input
+except NameError: pass
+
+print ("Enter the numbers you want to multiply.")
+x = int(input("x? "))
+y = int(input("y? "))
+
 
 def multiply(multiplicand,multiplier):
 
@@ -30,4 +40,4 @@ def multiply(multiplicand,multiplier):
 	
 	return product
 
-print multiply(8,-9)
+print (multiply(x,y))
