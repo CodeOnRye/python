@@ -13,6 +13,7 @@ divisor = int(input("What is the dvisor? "))
 def divide(dividend, divisor):
     quotient = 0
     remainder = dividend
+    divisorOriginal = divisor
     #shift left 32 bits
     #makes it 64 bits
     divisor = divisor << 32
@@ -27,6 +28,12 @@ def divide(dividend, divisor):
             #shift left, no need to or in a 0
             quotient = quotient << 1
         divisor = divisor >> 1
+
+    if remainder == divisorOriginal:
+        quotient = quotient + 1
+        remainder = 0
+
+
 #    print (quotient, remainder)
     return (quotient, remainder)
     
